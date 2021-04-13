@@ -87,7 +87,9 @@ class TestScript
             $newList[$item->id] = $item;
         }
         $companyTree = Company::createTree($newList, $groupTravel);
+        print('<pre>');
         print_r($companyTree);
+        print('</pre>');
 
         echo 'Total time: '.  (microtime(true) - $start);
     }
